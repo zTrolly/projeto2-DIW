@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(25, 25, 25);
+}
+p{
+    color: white;
+}
+h3{
+    color: white;
+}
+li{
+    color: white;
+}
+.carousel-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.carousel-frame{
+    grid-column: 1;
+}
+
+.carousel-text{
+grid-column: 2;
+}
+
+
+.lista-ator{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.lista-ator li{
+display: inline-block;
+gap: 10px;
+}
+
+.carousel-control-prev{
+    padding-right: 100px;
+}
+
+.carousel-control-next{
+    padding-left: 100px;
+}
+
+.carousel-inner{
+    overflow: hidden;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMovieList</title>
+    <meta name="description" content="O melhor portal de filmes de todo o Brasil">
+    <meta name="keywords" content="">
+    <meta name="author" content="Breno Lopes">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style type="text/css">
+
+     /*========== CSS RESET ==========*/
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    }
+
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+     /*========== CSS VARIAVEIS ==========*/
+    :root{
+        /*======= CORES =======*/
+        /* --first-color:;
+        --second-color:;
+        --body-text-color:;
+        --title-color:;
+        --subtitle-color:;
+        --avaliation-color:; */
+
+        /*======= FONTS =======*/
+
+
+
+    }
+
+    </style>
+    </head>
+    
+    <body>
+        
+        <div class="container" id="container">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-frame">
+                        <iframe width="500" height="249" src="https://www.youtube.com/embed/9nzFy9HpVGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-text">
+                        <h3 style="font-size: xx-large;">Nome do filme</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa consequuntur ratione vitae possimus illo dolores nihil nulla, sed totam, ducimus eos magnam asperiores esse natus animi vel, recusandae quis qui perferendis quae fuga! Inventore culpa tenetur ipsam eaque est, autem asperiores debitis voluptatibus? Atque maiores illum consectetur magnam eligendi?</p>
+                        <ul class="lista-ator">
+                            <li>ator1</li>
+                            <li>ator2</li>
+                            <li>ator3</li>
+                            <li>ator4</li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-frame">
+                        <iframe width="500" height="249" src="https://www.youtube.com/embed/9nzFy9HpVGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-text">
+                        <h3 style="font-size: xx-large;">Nome do filme</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa consequuntur ratione vitae possimus illo dolores nihil nulla, sed totam, ducimus eos magnam asperiores esse natus animi vel, recusandae quis qui perferendis quae fuga! Inventore culpa tenetur ipsam eaque est, autem asperiores debitis voluptatibus? Atque maiores illum consectetur magnam eligendi?</p>
+                        <ul class="lista-ator">
+                            <li>ator1</li>
+                            <li>ator2</li>
+                            <li>ator3</li>
+                            <li>ator4</li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-frame">
+                        <iframe width="500" height="249" src="https://www.youtube.com/embed/9nzFy9HpVGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-text">
+                        <h3 style="font-size: xx-large;">Nome do filme</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa consequuntur ratione vitae possimus illo dolores nihil nulla, sed totam, ducimus eos magnam asperiores esse natus animi vel, recusandae quis qui perferendis quae fuga! Inventore culpa tenetur ipsam eaque est, autem asperiores debitis voluptatibus? Atque maiores illum consectetur magnam eligendi?</p>
+                        <ul class="lista-ator">
+                            <li>ator1</li>
+                            <li>ator2</li>
+                            <li>ator3</li>
+                            <li>ator4</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    </body>
+</html>
