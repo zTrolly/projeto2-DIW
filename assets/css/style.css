@@ -1,48 +1,145 @@
-body{
-    background-color: rgb(25, 25, 25);
-}
-p{
-    color: white;
-}
-h3{
-    color: white;
-}
-li{
-    color: white;
-}
-.carousel-item{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 50px;
-    overflow: hidden;
-}
-
-.carousel-frame{
-    grid-column: 1;
-}
-
-.carousel-text{
-grid-column: 2;
+/*========== RESET ==========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
 }
 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
-.lista-ator{
-    margin-left: 0px;
-    padding-left: 0px;
+/*========== CSS VARIAVEIS ==========*/
+
+/*========== CORES ==========*/
+:root{
+    --base-color:#151515;
+    --first-color:#f86465;
+    --second-color:#0bf2f1;
+    --body-text-color:#f5f5f5;
+    --title-color: var(--second-color);
+    --subtitle-color:var(--first-color);
 }
-.lista-ator li{
-display: inline-block;
-gap: 10px;
+/*======= FONTS =======*/
+:root{
+    --body-font:;
+    --big-font-size:;
+    --h2-font-size:;
+    --normal-font-size:;
+}
+@media screen and (min-width: 768px){
+    :root{
+        --big-font-size:;
+        --h2-font-size:;
+        --normal-font-size:;
+
+    }
 }
 
-.carousel-control-prev{
-    padding-right: 100px;
+
+
+
+
+
+/*========== MENU ==========*/  
+
+#search__input::after{
+    content: 'jashdgasjhdgasjdgasdjg';
+    color: #0bf2f1;
+    animation: pisca;
 }
 
-.carousel-control-next{
-    padding-left: 100px;
+@keyframe (pisca){
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
 }
+/*========== LANÇAMENTOS ==========*/
 
-.carousel-inner{
-    overflow: hidden;
+
+
+/*========== EM DESTAQUE ==========*/
+
+
+
+/*========== ULTIMAS AVALIAÇÕES ==========*/
+
+
+
+/*========== ENTEVISTAS E MAKING-OF ==========*/
+
+
+
+/*========== NOVIDADES ==========*/
+
+
+
+/*========== SOBRE ==========*/
+
+
+
+/* ========== EDITORIAL ==========*/
+
+
+
+/*========== MEDIAS QUERY ==========*/
+
+
+/*X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .menu{
+        background: whitesmoke;
+        padding: 2rem;
+    }
 }
+/*Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1199.98px) {  }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1399.98px) {  }
