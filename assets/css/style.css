@@ -59,40 +59,21 @@ table {
 }
 /*======= FONTS =======*/
 :root{
-    --body-font:;
-    --big-font-size:;
-    --h2-font-size:;
-    --normal-font-size:;
+    --body-font:1rem;
+    --big-font-size:1.5;
+    --h2-font-size:1.25;
+    --normal-font-size:1rem;
 }
-@media screen and (min-width: 768px){
-    :root{
-        --big-font-size:;
-        --h2-font-size:;
-        --normal-font-size:;
-
-    }
-}
-
-
-
-
-
 
 /*========== MENU ==========*/  
-
-#search__input::after{
-    content: 'jashdgasjhdgasjdgasdjg';
-    color: #0bf2f1;
-    animation: pisca;
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-@keyframe (pisca){
-    0%, 100%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
+.nav-item{
+    margin-right: 1rem;
 }
 /*========== LANÇAMENTOS ==========*/
 
