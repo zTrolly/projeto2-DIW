@@ -60,11 +60,14 @@ table {
 /*======= FONTS =======*/
 :root{
     --body-font:1rem;
-    --big-font-size:1.5;
-    --h2-font-size:1.25;
+    --h2-font-size:3rem;
+    --h3-font-size:1.5rem;
     --normal-font-size:1rem;
 }
-
+:root{
+    --font-title: monospace;
+    --font-body: arial;
+}
 /*========== MENU ==========*/  
 .header{
     box-sizing: border-box;
@@ -75,7 +78,7 @@ table {
 .logo{
     max-width: fit-content;
     position: absolute;
-    font-family: monospace;
+    font-family: var(--font-title);
     letter-spacing: .2rem;
     font-size: xx-large;
     margin-left: 20px;
@@ -133,9 +136,54 @@ table {
     transition: all 0.4s;
 }
 /*========== LANÇAMENTOS ==========*/
+.lancamentos{
+    display: grid;
+    grid-template-rows: 10%;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    background-color: #202020;
+    
+}
 
+#lancamento__titulo{
+    color: var(--first-color);
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    font-family: monospace;
+    grid-row: 1;
+    grid-column: 1 / 4;
+    text-align: center;
+}
 
+.conteudo-filme{
+    grid-column: 2;
+}
 
+.titulo-filme__lancamento{
+    color: #f5f5f5;
+    font-family: var(--font-title);
+    font-size: var(--h3-font-size);
+    letter-spacing: .2rem;
+}
+
+.conteudo-filme .tag-filme__lancamento{
+    color: var(--first-color);
+    font-family: monospace;
+    font-size: 1.03rem;
+    margin-top: 10px;
+}
+
+.conteudo-filme{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    color: #f5f5f5;
+    font-family: var(--font-body);
+    gap: 5px;
+    align-items: center;
+}
 /*========== EM DESTAQUE ==========*/
 
 

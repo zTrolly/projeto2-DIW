@@ -8,9 +8,6 @@ const buttonElement = document.querySelector('#search__button');
 const inputElement = document.querySelector('#search__input');
 
 
-function creatMovieContainer(){
-    
-}
 
 
 buttonElement.onclick = function(event){
