@@ -4,9 +4,8 @@ function toggleMenu(){
     const nav =  document.getElementById('nav');
     nav.classList.toggle('active');
 }
-<<<<<<< HEAD
 btnMobile.addEventListener('click', toggleMenu);
-}
+
 
 /*PARTE DA API DE DESTAQUES*/
 const API_KEY = 'fa08c4b23ba5324d5e306ec5d6eab4d5';
@@ -108,8 +107,3 @@ async function exibirAvaliacoes(){
     
 
 }
-=======
-
-
-btnMobile.addEventListener('click', toggleMenu);
->>>>>>> parent of 8789b22 (Em destaque add)

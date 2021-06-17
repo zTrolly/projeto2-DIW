@@ -46,7 +46,6 @@ table {
     border-spacing: 0;
 }
 
-<<<<<<< HEAD
 h2 {
     color: var(--first-color);
     font-size: 2em;
@@ -75,8 +74,6 @@ h2 {
     
   }
 
-=======
->>>>>>> parent of 8789b22 (Em destaque add)
 /*========== CSS VARIAVEIS ==========*/
 
 /*========== CORES ==========*/
@@ -144,27 +141,6 @@ header{
     display: none;
 }
 
-<<<<<<< HEAD
-/*========== EM DESTAQUE ==========*/
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 500px;
-  height: 282px;
-  /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 500px;
-  height: 282px;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-
-=======
 /*========== LANÇAMENTOS ==========*/
 .movie-box{
     display: grid;
@@ -179,7 +155,6 @@ header{
     grid-column: 1;
     width: 100%;
     display: block;
->>>>>>> parent of 8789b22 (Em destaque add)
 }
 
 .movie__box-content{
@@ -196,31 +171,20 @@ header{
     text-align: left;
     grid-column: 2;
 }
-<<<<<<< HEAD
 
 /* Style the back side */
 .flip-card-back {
     background-color: #f86465;
   color: white;
   transform: rotateY(180deg);
-=======
-.hidden{
-display: none;
->>>>>>> parent of 8789b22 (Em destaque add)
 }
 
 
-<<<<<<< HEAD
 .boxSerie__avaliacao{
     font-size: xxx-large;
     font-family: monospace;
     margin-bottom: 1.2rem;
 }
-=======
-
-/*========== EM DESTAQUE ==========*/
-
->>>>>>> parent of 8789b22 (Em destaque add)
 
 .display{
     display: flex;
