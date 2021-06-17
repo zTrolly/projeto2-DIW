@@ -46,6 +46,22 @@ table {
     border-spacing: 0;
 }
 
+h2 {
+    color: var(--first-color);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom:  1rem;
+  }
+  
+  h2:after, h2:before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--first-color);
+    margin: 0 auto;
+  }
+
 /*========== CSS VARIAVEIS ==========*/
 
 /*========== CORES ==========*/
@@ -64,6 +80,8 @@ table {
     --h2-font-size:1.25;
     --normal-font-size:1rem;
 }
+
+
 
 /*========== MENU ==========*/  
 header{
@@ -114,41 +132,65 @@ header{
 }
 
 /*========== LANÇAMENTOS ==========*/
-.movie-box{
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 10px;
-    box-sizing: border-box;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  /* Remove this if you don't want the 3D effect */
 }
 
-.movie-box img{
-    grid-column: 1;
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 500px;
+  height: 282px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 500px;
+  height: 282px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #f86465;
+  color: white;
+  transform: rotateY(180deg);
+
+  
+}
+
+.boxSerie__title{
     width: 100%;
-    display: block;
+    font-size: xxx-large;
+    font-family: monospace;
 }
 
-.movie__box-content{
-    grid-column: 2;
-    color: #f5f5f5;
-    grid-template-columns: 1fr;
-
+.boxSerie__avaliacao{
+    font-size: xxx-large;
+    font-family: monospace;
+    margin-bottom: 1.2rem;
 }
-
-.movie__box-content span{
-    display: block;
-    padding: .25rem;
-    background-color: #555;
-    text-align: left;
-    grid-column: 2;
-}
-.hidden{
-display: none;
-}
-
-
-
 /*========== EM DESTAQUE ==========*/
 
 
@@ -198,7 +240,7 @@ display: none;
         -o-transition: .6s;
         visibility: hidden;
         overflow-y: hidden;
-}
+    }
 
     #nav.active #menu{
         height: calc(100vh - 70px);
@@ -276,21 +318,94 @@ display: none;
 
 /*========== MOBILE LANCAMENTOS ==========*/
 @media(max-width:768px){
-    .displayFilmes{
-        width: 80vw;
-        height: 30vw;
-        background-color: var(--first-color);
+
+    .em-destaque__titulo{
+        text-align: center;
+        font-family: monospace;
+        font-size: xx-large;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+
+    }
+
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 169px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 300px;
+        height: 169px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+
+    .flip-card-front, .flip-card-back {
+        display: block;
+        width: 300px;
+        height: 169px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+
+    .flip-card-front {
+        background-color: #bbb;
+        color: black;
+    }
+
+
+    .flip-card-back {
+        background-color: #f86465;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    .display img{
+        width: 300px;
+        height: 169px;
+    }
+
+    .display{
+        display: flex;
+        max-width: 310px;
+        flex-direction: row;
+        overflow-x: scroll;
         margin: 0 auto;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        margin-top: 1rem;
+        gap: 10px;
     }
 
 
-    .carousel-indicators{
-       text-align: right;
+    .flip-card{
+        margin: 0 auto;
     }
+
+    .boxSerie__btn{
+        color: white;
+        background-color: #151515;
+        border: var(--base-color) 1px solid;
+        padding: .5rem;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        font-family: monospace;
+    }
+
+    .boxSerie__btn:hover{
+        background-color:white ;
+        color: var(--base-color);
+    }
+
+    
 }

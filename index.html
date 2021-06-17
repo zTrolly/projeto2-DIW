@@ -19,7 +19,6 @@
                 <span id="icone"></span>
             </button>
             <ul class="menu" id="menu">
-                <li class="nav-item"><a href="#lancamentos">Lançamentos</a></li>
                 <li class="nav-item"><a href="#em-destaque">Em destaque</a></li>
                 <li class="nav-item"><a href="#avaliacao">Avaliações</a></li>
                 <li class="nav-item"><a href="#entrevistas">Entrevistas & MakingOf</a></li>
@@ -29,9 +28,21 @@
     </header>
 
     <main class="main" id="main">
-        <section class="lancamentos" id="lancamentos">
-        <div class="displayFilmes" id="displayFilmes">
-
+        <section class="em-destaque" id="em-destaque">
+            <h2 class="em-destaque__titulo">Destaques da Semana</h2>
+        <div class="display" id="display">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="" alt="">
+                  </div>
+                  <div class="flip-card-back" style="background-image: url('${imgPath}${imgPath}${f.results[0].backdrop_path}'); filter: blur(5px) contrast(1) brightness(0.5);">
+                    <h1></h1>
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+            </div>
         </div>
         </section>
     </main>
