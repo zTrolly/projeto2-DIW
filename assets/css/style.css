@@ -322,21 +322,106 @@ header{
 
 /*========== MOBILE LANCAMENTOS ==========*/
 @media(max-width:768px){
-    .displayFilmes{
-        width: 80vw;
-        height: 30vw;
-        background-color: var(--first-color);
-        margin: 0 auto;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        margin-top: 1rem;
-    }
-
-
-    .carousel-indicators{
-       text-align: right;
-    }
+    @media(max-width:768px){
+        .displayFilmes{
+            width: 80vw;
+            height: 30vw;
+            background-color: var(--first-color);
+    
+        .em-destaque__titulo{
+            text-align: center;
+            font-family: monospace;
+            font-size: xx-large;
+            text-transform: uppercase;
+            margin-top: 1.5rem;
+    
+        }
+    
+    
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 169px;
+        }
+    
+        .flip-card-inner {
+            position: relative;
+            width: 300px;
+            height: 169px;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+    
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+    
+    
+        .flip-card-front, .flip-card-back {
+            display: block;
+            width: 300px;
+            height: 169px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    
+    
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+    
+    
+        .flip-card-back {
+            background-color: #f86465;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    
+        .display img{
+            width: 300px;
+            height: 169px;
+        }
+    
+        .display{
+            display: flex;
+            max-width: 310px;
+            flex-direction: row;
+            overflow-x: scroll;
+            margin: 0 auto;
+            gap: 10px;
+        }
+    
+    
+        .flip-card{
+            margin: 0 auto;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            margin-top: 1rem;
+        }
+    
+        .boxSerie__btn{
+            color: white;
+            background-color: #151515;
+            border: var(--base-color) 1px solid;
+            padding: .5rem;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            font-family: monospace;
+        }
+    
+        .carousel-indicators{
+           text-align: right;
+        .boxSerie__btn:hover{
+            background-color:white ;
+            color: var(--base-color);
+        }
+    
 }
