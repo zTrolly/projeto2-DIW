@@ -1,11 +1,10 @@
+const btnMobile =  document.getElementById('btn-mobile');
 
-/*MENU MOBILE JS */
-{
-    const btnMobile =  document.getElementById('btn-mobile');
 function toggleMenu(){
     const nav =  document.getElementById('nav');
     nav.classList.toggle('active');
 }
+<<<<<<< HEAD
 btnMobile.addEventListener('click', toggleMenu);
 }
 
@@ -109,3 +108,8 @@ async function exibirAvaliacoes(){
     
 
 }
+=======
+
+
+btnMobile.addEventListener('click', toggleMenu);
+>>>>>>> parent of 8789b22 (Em destaque add)
