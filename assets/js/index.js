@@ -19,7 +19,6 @@ async function exibirTrending(){
     let display =  document.getElementById('display');
     const d = await fetch(`${trendingPath}`);
     const f = await d.json();
-    console.log(f.results[0], f.results[1], f.results[2], f.results[3]);
     text = text + `
         <div class="boxSerie">
             <div class="flip-card">
@@ -47,7 +46,7 @@ async function exibirTrending(){
                     <h1 class="boxSerie__title">${f.results[1].original_name}</h1>
                     <p class="boxSerie__lancamento">${f.results[1].first_air_date}</p>
                     <p class="boxSerie__avaliacao">${f.results[1].vote_average}</p>
-                    <a href="https://www.themoviedb.org/tv/${f.results[0].id}" target ="_blank" class="boxSerie__btn">Saiba Mais</a>
+                    <a href="https://www.themoviedb.org/tv/${f.results[1].id}" target ="_blank" class="boxSerie__btn">Saiba Mais</a>
                 </div>
                 </div>
             </div>
@@ -62,7 +61,7 @@ async function exibirTrending(){
                 <h1 class="boxSerie__title">${f.results[2].original_name}</h1>
                 <p class="boxSerie__lancamento">${f.results[2].first_air_date}</p>
                 <p class="boxSerie__avaliacao">${f.results[2].vote_average}</p>
-                <a href="https://www.themoviedb.org/tv/${f.results[0].id}" target ="_blank" class="boxSerie__btn">Saiba Mais</a>
+                <a href="https://www.themoviedb.org/tv/${f.results[2].id}" target ="_blank" class="boxSerie__btn">Saiba Mais</a>
               </div>
             </div>
         </div>
@@ -77,7 +76,21 @@ async function exibirTrending(){
                 <h1 class="boxSerie__title">${f.results[3].original_name}</h1>
                 <p class="boxSerie__lancamento">${f.results[3].first_air_date}</p>
                 <p class="boxSerie__avaliacao">${f.results[3].vote_average}</p>
-                <a href="https://www.themoviedb.org/tv/${f.results[0].id}" target ="_blank" class="boxSerie__btn">Saiba Mais</a>
+                <a href="https://www.themoviedb.org/tv/${f.results[3].id}" target ="_blank" class="boxSerie__btn">Saiba Mais</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="${imgPath}${f.results[4].backdrop_path}" alt="">
+              </div>
+              <div class="flip-card-back">
+                <h1 class="boxSerie__title">${f.results[4].original_name}</h1>
+                <p class="boxSerie__lancamento">${f.results[4].first_air_date}</p>
+                <p class="boxSerie__avaliacao">${f.results[4].vote_average}</p>
+                <a href="https://www.themoviedb.org/tv/${f.results[4].id}" target ="_blank" class="boxSerie__btn">Saiba Mais</a>
               </div>
             </div>
         </div>
@@ -90,3 +103,9 @@ async function exibirTrending(){
 exibirTrending();
 
 /*Ultimas avaliações*/
+async function exibirAvaliacoes(){
+    let text = '';
+    let filmes =  document.getElementById('filmes');
+    
+
+}

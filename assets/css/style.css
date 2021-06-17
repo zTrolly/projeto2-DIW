@@ -51,15 +51,27 @@ h2 {
     font-size: 2em;
     text-align: center;
     margin-bottom:  1rem;
+    font-family: monospace;
   }
   
-  h2:after, h2:before {
+  h2:after{
     content: '';
     display: block;
     width: 80px;
     height: 3px;
     background: var(--first-color);
     margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  
+  h2:before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--first-color);
+    margin: 0 auto;
+    
   }
 
 /*========== CSS VARIAVEIS ==========*/
@@ -131,12 +143,13 @@ header{
     display: none;
 }
 
-/*========== LANÇAMENTOS ==========*/
+/*========== EM DESTAQUE ==========*/
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: 282px;
   /* Remove this if you don't want the 3D effect */
 }
 
@@ -148,7 +161,7 @@ header{
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  
+
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -176,8 +189,6 @@ header{
     background-color: #f86465;
   color: white;
   transform: rotateY(180deg);
-
-  
 }
 
 .boxSerie__title{
@@ -191,15 +202,25 @@ header{
     font-family: monospace;
     margin-bottom: 1.2rem;
 }
-/*========== EM DESTAQUE ==========*/
 
+.display{
+    display: flex;
+    overflow-x: scroll;
+    width: 560px;
+    height: 300px;
+}
 
-
+.display::-webkit-scrollbar{
+    background-color: var(--base-color);
+}
+.display::-webkit-scrollbar-track{
+    background-color: var(--first-color);
+}
 /*========== ULTIMAS AVALIAÇÕES ==========*/
 
 
 
-/*========== ENTEVISTAS E MAKING-OF ==========*/
+/*========== ENTREVISTAS E MAKING-OF ==========*/
 
 
 
