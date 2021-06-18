@@ -1,0 +1,260 @@
+/*========== RESET ==========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    background: url("../imgs/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg") center fixed no-repeat;
+    background-size: cover;
+}
+ol, ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*========== CSS VARIAVEIS ==========*/
+
+/*========== CORES ==========*/
+:root{
+    --base-color:#151515;
+    --first-color:#f86465;
+    --second-color:#0bf2f1;
+    --body-text-color:#f5f5f5;
+    --title-color: var(--second-color);
+    --subtitle-color:var(--first-color);
+}
+/*======= FONTS =======*/
+:root{
+    --body-font:1rem;
+    --big-font-size:1.5;
+    --h2-font-size:1.25;
+    --normal-font-size:1rem;
+}
+
+/*========== MENU ==========*/
+.header{
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: transparent;
+}
+.logo{
+    max-width: fit-content;
+    position: absolute;
+    font-family: monospace;
+    letter-spacing: .2rem;
+    font-size: xx-large;
+    margin-left: 20px;
+    color: var(--first-color);
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+.nav-item{
+    margin-right: 5px;
+    padding: .25rem;
+    margin-top: 5px;
+
+}
+.nav-item a{
+    color: #151515;
+    padding: 10px;
+    transition: all 0.4s;
+    background-color: var(--first-color);
+    border-radius: 5px;
+    border: 1px solid var(--first-color);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.nav-item a:hover{
+    background-color:transparent;
+    color:var(--first-color);
+
+}
+/*========== PESQUISA ==========*/
+.pesquisa{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#search{
+    width: 600px;
+    padding: 5.5px;
+    border-radius: 10px;
+    outline: none;
+    border: #f86465 1px solid;
+    background-color: hsl(0, 0%, 8%, 10%);
+    color: #f86465;
+    margin-right: 0px;
+}
+
+#btnPesquisa{
+    border: #f86465 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--first-color);
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    margin-left: 0px ;
+    margin-bottom: 20px;
+}
+
+#btnPesquisa:hover{
+    background-color: var(--base-color);
+    color:var(--first-color);
+}
+
+/*========== FILMES ==========*/
+
+#Filmes{
+    margin-top: 50px;
+    display:  flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    
+}
+.boxFilme{
+   padding: 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   max-width: 500px;
+   color: white;
+   background-color: #151515;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+.boxFilme img{
+    width: 100%;
+    height: 100%;
+}
+
+.boxFilme img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.movieContent{
+    margin-left: 20px;
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+.movieContent::-webkit-scrollbar{
+    width: 10px;
+    background-color: #151515;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.movieContent::-webkit-scrollbar-thumb{
+    background-color: var(--first-color);
+    max-height: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.movieContent h2{
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 10px;
+    font-family: monospace;
+    color: #f86465;
+}
+
+ .movieContent strong{
+    color: var(--first-color);
+}
+.notaFilme{
+    background-color: #252525;
+    max-width: 65px;
+    margin-top: 10px;
+}
+
+/*X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .boxFilme{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    #search{
+        width: 100%
+    }
+
+    .nav-item{
+        display: block;
+        margin-top: 50px;
+        text-align: center;
+        width:  300px;
+        margin: 0 auto;
+    }
+
+    #logo{
+        display: block;
+        position: relative;
+        margin-bottom: 20px;
+    }
+}
