@@ -12,13 +12,16 @@ function exibeFilmes(){
         let mediaType = filme.media_type;
         if(mediaType == "movie" || "tv"){
             const Poster = filme.poster_path;
-            const Overview = filme.overview
+            const Overview = filme.overview;
             if (Poster&&Overview){
+                let teste;
+                if(mediaType == 'tv') teste = filme.original_name;
+                if(mediaType == 'movie') teste = filme.original_title;
                 texto = texto + `
                 <div class="boxFilme">
-                    <a href="https://www.themoviedb.org/${mediaType}/${filme.id}" target ="_blank"><img src="https://image.tmdb.org/t/p/w500/${filme.poster_path}" alt="${filme.title}"></a>
+                    <a href="https://www.themoviedb.org/${mediaType}/${filme.id}" target ="_blank"><img src="https://image.tmdb.org/t/p/w500/${filme.poster_path}" alt="${teste}"></a>
                     <section class="movieContent">
-                        <h2 class="tituloFilme">${filme.original_title}</h2>
+                        <h2 class="tituloFilme">${teste}</h2>
                         <p class="overview"><strong>Sinopse: </strong>${filme.overview}</p>
                         <div class="notaFilme"><strong>Nota: </strong><span class="avaliacao">${filme.vote_average}</span></div>
                 </section>

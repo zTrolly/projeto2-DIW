@@ -19,9 +19,8 @@
                 <span id="icone"></span>
             </button>
             <ul class="menu" id="menu">
-                <li class="nav-item"><a href="#lancamentos">Lançamentos</a></li>
                 <li class="nav-item"><a href="#em-destaque">Em destaque</a></li>
-                <li class="nav-item"><a href="#avaliacao">Avaliações</a></li>
+                <li class="nav-item"><a href="#avaliacoes">Avaliações</a></li>
                 <li class="nav-item"><a href="#entrevistas">Entrevistas & MakingOf</a></li>
                 <li class="nav-item"><a href="pesquisa.html">Pesquisar filmes</a></li>
             </ul>
@@ -29,26 +28,71 @@
     </header>
 
     <main class="main" id="main">
-        <section class="lancamentos" id="lancamentos">
-        <div class="displayFilmes" id="displayFilmes">
-
         <section class="em-destaque" id="em-destaque">
-            <h2 class="em-destaque__titulo">Destaques da Semana</h2>
-        <div class="display" id="display">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="" alt="">
-                  </div>
-                  <div class="flip-card-back" style="background-image: url('${imgPath}${imgPath}${f.results[0].backdrop_path}'); filter: blur(5px) contrast(1) brightness(0.5);">
-                    <h1></h1>
-                    <p></p>
-                    <p></p>
-                  </div>
+            <div class="displayFilmes" id="displayFilmes">
+                <div class="titulo"><h2 class="em-destaque__titulo">DESTAQUE DA SEMANA</h2></div>
+                <div class="display" id="display">
+                    <div class="serieBox"></div>
                 </div>
             </div>
-        </div>
         </section>
+        <section class="avaliacoes" id="avaliacoes">
+            <div class="avaliacao" id="avaliacao1">
+                <div class="foto__avaliacao">
+                    <img src="./assets/imgs/image (1).jfif" alt="">
+                </div>
+                <div class="nome__avaliacao"><h3>Bruno Roronoa</h3></div>
+                <div class="texto__avaliacao">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa non suscipit vero placeat quaerat ex ipsam temporibus nihil at, est, consequuntur et dolore aliquid culpa ea sequi? Quo minima itaque explicabo fugit cum. Quas non, facere aliquid necessitatibus ipsam laboriosam, maxime repudiandae eum quae similique ullam obcaecati quia. Ipsam, adipisci?</p>
+                </div>
+            </div>
+
+            <div class="avaliacao" id="avaliacao2">
+                <div class="foto__avaliacao">
+                    <img src="./assets/imgs/image (2).jfif" alt="">
+                </div>
+                <div class="nome__avaliacao"><h3>Eren Yeager</h3></div>
+                <div class="texto__avaliacao">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ut velit rerum corrupti ab illum voluptatum, ullam exercitationem nisi quis voluptatibus ipsa repudiandae error alias. Laborum vitae harum ullam corporis dolore doloremque animi quae numquam quasi? Magni dolor accusantium debitis. Ad voluptatibus sit quia velit eveniet necessitatibus numquam, pariatur praesentium!</p>
+                </div>
+            </div>
+
+            <div class="avaliacao" id="avaliacao3">
+                <div class="foto__avaliacao">
+                    <img src="./assets/imgs/image.jfif" alt="">
+                </div>
+                <div class="nome__avaliacao"><h3>Boa Hancock</h3></div>
+                <div class="texto__avaliacao">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita corrupti in veniam necessitatibus. Molestiae molestias, velit saepe beatae dolore incidunt, reiciendis ad ratione voluptas voluptatem minus! Explicabo, hic aliquid alias ipsa, obcaecati esse non doloribus earum accusantium beatae magni in quibusdam iure a laboriosam soluta fugiat enim perferendis distinctio sapiente.</p>
+                </div>
+            </div>
+        </section>
+        <section class="entrevistas" id="entrevistas">
+            <div class="entrevista" id="entrevista1">
+                <div class="video__entrevista">
+                    <div class="texto__entrevista"><h3>Making of cidade de Deus</h3></div>
+                    <iframe width="280vw" height="186" src="https://www.youtube.com/embed/JeGHpbUT7Xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <div class="entrevista" id="entrevista2">
+                <div class="texto__entrevista"><h3>Making alto da compadecida</h3></div>
+                <div class="video__entrevista">
+                    <iframe width="280vw" height="186" src="https://www.youtube.com/embed/e1O7DLuG5P4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <div class="entrevista" id="entrevista3">
+                <div class="texto__entrevista"><h3>Entrevista com o elenco Vingadores</h3></div>
+                <div class="video__entrevista">
+                    <iframe width="280vw" height="186" src="https://www.youtube.com/embed/0uJ8vMfk-c4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </section>
+
+
+
     </main>
 
 

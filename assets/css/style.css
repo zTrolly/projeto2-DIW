@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    scroll-behavior: smooth;
 }
 ol, ul {
     list-style: none;
@@ -72,6 +73,23 @@ h2 {
     background: var(--first-color);
     margin: 0 auto;
     
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--base-color);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    width: 2px; 
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #555; 
   }
 
 /*========== CSS VARIAVEIS ==========*/
@@ -142,70 +160,120 @@ header{
 }
 
 /*========== LANÇAMENTOS ==========*/
-.movie-box{
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.movie-box img{
-    grid-column: 1;
-    width: 100%;
-    display: block;
-}
-
-.movie__box-content{
-    grid-column: 2;
-    color: #f5f5f5;
-    grid-template-columns: 1fr;
-
-}
-
-.movie__box-content span{
-    display: block;
-    padding: .25rem;
-    background-color: #555;
-    text-align: left;
-    grid-column: 2;
-}
-
-/* Style the back side */
-.flip-card-back {
-    background-color: #f86465;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-
-.boxSerie__avaliacao{
-    font-size: xxx-large;
-    font-family: monospace;
-    margin-bottom: 1.2rem;
-}
-
 .display{
-    display: flex;
-    overflow-x: scroll;
-    width: 560px;
-    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.display img{
+    width: 350px;
 }
 
-.display::-webkit-scrollbar{
-    background-color: var(--base-color);
+.serieBox{
+    display: grid;
+    grid-template-rows: 1fr 150px;
+    max-width: 300px;
+    margin: 0 auto;
 }
-.display::-webkit-scrollbar-track{
+
+.serieContent{
+    overflow-y: scroll;
+}
+
+.serieContent::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .serieContent::-webkit-scrollbar-track {
+    background: var(--base-color);
+  }
+
+  .serieContent::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    width: 2px; 
+  }
+  
+  .serieContent::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .serieBox img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.tituloFilme{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: var(--first-color);
+    text-align: center;
+}
+
+.sinopse{
+    color: white;
+}
+
+/*========== ULTIMAS AVALIAÇÕES ==========*/
+.avaliacao{
+    max-width: 320px;
+    border: 2.5px solid var(--first-color);
+    background-color: var(--base-color);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    color: white;
+    margin: 0 auto;padding: 25px;
+}
+
+.foto__avaliacao img{
+    position: relative;
+    top: -60px;
+    right: -80px;
+    display: block;
+    width: 100px;
+    border-radius: 50%;
+}
+.nome__avaliacao{
+    color: var(--first-color);
+    font-size: 24px;
+}
+
+.avaliacoes{
+    display: flex;
+    margin-top: 3.5rem;
+    padding: 50px;
+    text-align: center;
+    gap: 15px;
     background-color: var(--first-color);
 }
-/*========== ULTIMAS AVALIAÇÕES ==========*/
-
-
-
 /*========== ENTREVISTAS E MAKING-OF ==========*/
+.texto__entrevista h3{
+    color: var(--first-color);
+    font-size: 20px;
+    font-family: monospace;
+    letter-spacing: .2rem;
+    text-align: center;
+}
 
+.entrevista{
+text-align: center;margin: 0 auto;
 
+}
+
+.entrevista iframe{
+    width: vw;
+}
+
+.entrevistas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 
 /*========== NOVIDADES ==========*/
 
@@ -244,7 +312,7 @@ header{
         -o-transition: .6s;
         visibility: hidden;
         overflow-y: hidden;
-}
+    }
 
     #nav.active #menu{
         height: calc(100vh - 70px);
@@ -298,7 +366,6 @@ header{
 
     #nav.active #icone{
         border-top-color: transparent;
-
     }
 
     #nav.active #icone::before{
@@ -319,109 +386,68 @@ header{
 
     }
 }
-
 /*========== MOBILE LANCAMENTOS ==========*/
 @media(max-width:768px){
-    @media(max-width:768px){
-        .displayFilmes{
-            width: 80vw;
-            height: 30vw;
-            background-color: var(--first-color);
+    .display{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
     
-        .em-destaque__titulo{
-            text-align: center;
-            font-family: monospace;
-            font-size: xx-large;
-            text-transform: uppercase;
-            margin-top: 1.5rem;
-    
-        }
-    
-    
-        .flip-card {
-            background-color: transparent;
-            width: 300px;
-            height: 169px;
-        }
-    
-        .flip-card-inner {
-            position: relative;
-            width: 300px;
-            height: 169px;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-    
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-    
-    
-        .flip-card-front, .flip-card-back {
-            display: block;
-            width: 300px;
-            height: 169px;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-    
-    
-        .flip-card-front {
-            background-color: #bbb;
-            color: black;
-        }
-    
-    
-        .flip-card-back {
-            background-color: #f86465;
-            color: white;
-            transform: rotateY(180deg);
-        }
-    
-        .display img{
-            width: 300px;
-            height: 169px;
-        }
-    
-        .display{
-            display: flex;
-            max-width: 310px;
-            flex-direction: row;
-            overflow-x: scroll;
-            margin: 0 auto;
-            gap: 10px;
-        }
-    
-    
-        .flip-card{
-            margin: 0 auto;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            margin-top: 1rem;
-        }
-    
-        .boxSerie__btn{
-            color: white;
-            background-color: #151515;
-            border: var(--base-color) 1px solid;
-            padding: .5rem;
-            border-radius: 5px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            -o-border-radius: 5px;
-            font-family: monospace;
-        }
-    
-        .carousel-indicators{
-           text-align: right;
-        .boxSerie__btn:hover{
-            background-color:white ;
-            color: var(--base-color);
-        }
-    
+    .serieBox{
+        display: grid;
+        grid-template-rows: 1fr 150px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    .serieBox img{
+        width: 100%;
+    }
+}
+
+/*========== MOBILE AVALIACAO ==========*/
+@media(max-width:768px){
+    .avaliacao{
+        width: 100%;
+        border: 2.5px solid var(--first-color);
+        background-color: var(--base-color);
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        color: white;
+        margin: 0 auto;padding: 25px;
+    }
+
+    .foto__avaliacao img{
+        position: initial;
+        margin-left: 50px;
+        display: block;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .nome__avaliacao{
+        color: var(--first-color);
+        font-size: 24px;
+    }
+
+    .avaliacoes{
+        display: flex;
+        margin-top: 1rem;
+        padding: 5px;
+        background-color: var(--first-color);
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    #avaliacao2,#avaliacao3{
+        display: none;
+    }
+    .entrevistas{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+   
+
 }
